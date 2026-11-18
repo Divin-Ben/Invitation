@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Invitation au mariage">
+  <title>Invitation de mariage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil">NOTRE MARIAGE</a>
+    <a class="rsvp-link" href="#confirmation">Confirmer ma présence</a>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">AVEC LA BÉNÉDICTION DE NOS FAMILLES</p>
+        <p class="small-script">Nous nous marions</p>
+        <h1><span data-name="bride">Ariane</span><i>&</i><span data-name="groom">Éloy</span></h1>
+        <p class="hero-date" data-date> SAMEDI · 11 JUILLET · 2026 </p>
+        <a class="gold-button" href="#invitation">Découvrir l'invitation</a>
+      </div>
+      <div class="scroll-cue">FAITES DÉFILER <span>↓</span></div>
+    </section>
+
+    <section class="section intro" id="invitation">
+      <p class="eyebrow gold">LE GRAND JOUR APPROCHE</p>
+      <h2>Deux cœurs, <em>une promesse.</em></h2>
+      <p class="intro-copy">C'est avec une immense joie que nous vous invitons à partager l'un des plus beaux jours de notre vie.</p>
+      <div class="date-card">
+        <span class="date-month">JUILLET</span>
+        <strong data-day>11</strong>
+        <span data-year>2026</span>
+        <span class="date-weekday">SAMEDI</span>
+      </div>
+      <p class="location-line"><span>⌖</span> <span data-venue>Chapelle La Grâce, Goma</span></p>
+    </section>
+
+    <section class="section gallery-section">
+      <p class="eyebrow gold">NOTRE HISTOIRE</p>
+      <h2>Quelques instants <em>à deux</em></h2>
+      <div class="gallery">
+        <figure class="photo photo-large"><img src="assets/couple-2.jpg" alt="Photo des futurs mariés"></figure>
+        <figure class="photo"><img src="assets/couple-1.jpg" alt="Les futurs mariés"></figure>
+        <figure class="photo"><img src="assets/couple-2.jpg" alt="Portrait des futurs mariés"></figure>
+      </div>
+    </section>
+
+    <section class="section details">
+      <p class="eyebrow gold">JOIGNEZ-VOUS À NOUS</p>
+      <h2>Le programme <em>de la journée</em></h2>
+      <div class="timeline">
+        <article><time>10h00</time><div><h3>Cérémonie religieuse</h3><p data-church>Chapelle La Grâce · Goma</p></div></article>
+        <article><time>13h00</time><div><h3>Réception</h3><p data-reception>Salle des fêtes · Goma</p></div></article>
+        <article><time>15h00</time><div><h3>Fête & célébration</h3><p>Un moment de joie à partager ensemble.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section dress">
+      <p class="eyebrow gold">ÉLÉGANCE RECOMMANDÉE</p>
+      <h2>Dress code</h2>
+      <p class="dress-title">NOIR <span>&</span> OR</p>
+      <p class="muted">Nous vous invitons à respecter ces couleurs pour rendre cette journée encore plus harmonieuse.</p>
+      <div class="swatches"><span class="swatch black"></span><span class="swatch gold-swatch"></span></div>
+    </section>
+
+    <section class="section rsvp" id="confirmation">
+      <p class="eyebrow gold">VOTRE PRÉSENCE NOUS HONORE</p>
+      <h2>Confirmez votre <em>présence</em></h2>
+      <p class="muted">Merci de répondre avant le <strong data-deadline>30 juin 2026</strong>.</p>
+      <form id="rsvpForm">
+        <label>Votre nom complet<input name="nom" type="text" placeholder="Nom et prénom" required></label>
+        <fieldset><legend>Serez-vous présent(e) ?</legend>
+          <label class="choice"><input type="radio" name="presence" value="Oui" required> Oui, avec plaisir</label>
+          <label class="choice"><input type="radio" name="presence" value="Non"> Désolé(e), je ne pourrai pas</label>
+        </fieldset>
+        <label>Votre boisson préférée
+          <select name="boisson" required>
+            <option value="">Choisir une boisson</option><option>Coca-Cola</option><option>Fanta</option><option>Maltina</option><option>Vitalo</option><option>Sprite</option><option>Energy Malt</option><option>Eau</option>
+          </select>
+        </label>
+        <label>Un petit message aux mariés<textarea name="message" rows="3" placeholder="Écrivez votre message (facultatif)"></textarea></label>
+        <button class="gold-button submit-button" type="submit">Envoyer ma réponse</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><p>AVEC AMOUR</p><h2><span data-name="bride">Ariane</span> <i>&</i> <span data-name="groom">Éloy</span></h2><small>Nous avons hâte de célébrer avec vous.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
