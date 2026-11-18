@@ -13,7 +13,7 @@ const CONFIG = {
   reception: "Salle des fêtes · Goma",
   deadline: "30 juin 2026",
   // Remplace par l'URL Web App Google Apps Script après déploiement.
-  scriptUrl: "COLLE_ICI_URL_WEB_APP"
+ scriptUrl: "https://script.google.com/macros/s/AKfycbyuC7kC3Opo7kIElWo3eaYs5R-z4C056zmpbGulmW9dISwhghEGOioiNwDnfEMGTIvvWw/exec"
 };
 
 document.querySelectorAll('[data-name="bride"]').forEach(el => el.textContent = CONFIG.bride);
